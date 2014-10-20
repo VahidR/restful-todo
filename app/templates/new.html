@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+ {#{ wtf.quick_form(form) }#}
+
+ <form class="form form-horizontal" method="post" role="form">
+  {{ form.hidden_tag() }}
+  {{ wtf.form_errors(form, hiddens="only") }}
+
+  {{ wtf.form_field(form.title) }}
+  {{ wtf.form_field(form.body) }}
+  {{ wtf.form_field(form.done) }}
+  {{ wtf.form_field(form.submit) }}
+  <a href="{{ url_for('main.index') }}"><button type="button" class="btn btn-default">Back to list</button></a>
+ </form>
+{% endblock %}

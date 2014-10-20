@@ -1,0 +1,1 @@
+from flask.ext.wtf import Formfrom wtforms import StringField, SubmitField, BooleanField, TextAreaFieldfrom wtforms.validators import Requiredclass TodoForm(Form):  title = StringField('What is it about?', validators=[Required()])  body = TextAreaField('Description')  done = BooleanField('Done')  submit = SubmitField('Add')

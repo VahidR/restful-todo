@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+  <form action="" method="post" class="form-horizontal">
+    <h3>Todo details</h3>
+    <div class="form-group">
+        <div class="">
+          <input type="text" id="title" name="title" class="form-control input-xlarge"
+            placeholder="Please give title to todo item" value="{{ todo.title }}"
+            required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="">
+          <textarea name="body" rows=10 class="form-control input-xlarge" placeholder="describle the todo item" required>{{ todo.body }}</textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="">
+          <label>Done?</label>
+          <input type=checkbox name=done.{{ todo.id }}{{ "checked" if todo.done }}>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="">
+          <button type="submit" class="btn btn-success">Update Todo</button>
+
+          <a href="{{ url_for('main.index') }}"><button type="button" class="btn btn-info">Back to list</button></a>
+        </div>
+    </div>
+  </form>
+
+  <div class="text-right">
+    <a href="{{ url_for('main.delete', todo_id=todo.id) }}"><button type="submit" class="btn btn-danger">Delete Todo</button></a>
+  </div>
+
+{% endblock %}
