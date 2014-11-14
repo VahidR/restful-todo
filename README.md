@@ -23,7 +23,7 @@ $ python manage.py runserver
 
 RESTful interactions
 ====================
-** GET the List of todos **
+**GET the List of todos**
 ```
 curl -u test:test -H "Accept: application/json" -i http://localhost:5000/todos/api/v1.0/todos
 ```
