@@ -1,25 +1,31 @@
 RESTful Todo Application
 =========================
-TBA
+A RESTful Web-based Todo Application in Python and Flask 
 
 Install
 ========
-TBA
-
-Test
-=====
-TBA
-```bash
-$ python manage.py test
+```
+$ python manage.py createall
 ```
 
 Running
 ========
-TBA
 ```bash
-$ python manage.py createall
 $ python manage.py runserver
 ```
+
+Test
+=====
+```bash
+$ python manage.py test
+```
+
+Remove
+========
+```bash
+$ python manage.py dropall
+```
+
 
 RESTful interactions
 ====================
