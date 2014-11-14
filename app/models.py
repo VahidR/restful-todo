@@ -1,5 +1,4 @@
 from datetime import datetime
-from random import randint
 from . import db
 from app.exceptions import ValidationError
 
@@ -13,7 +12,6 @@ class Todo(db.Model):
   publication_date = db.Column(db.DateTime)
 
   def __init__(self, title, body):
-    self.id = randint(1,2000000000)
     self.title = title
     self.body = body
     self.done = False
