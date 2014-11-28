@@ -1,6 +1,6 @@
 RESTful Todo Application
 =========================
-A RESTful Web-based Todo Application in Python and Flask 
+A RESTful web-based Todo application in Python and Flask 
 
 Install
 ========
