@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vahidR/restful-todo.svg?branch=master)](https://travis-ci.org/vahidR/restful-todo)
+
 RESTful Todo Application
 =========================
 A RESTful web-based Todo application in Python and Flask 
