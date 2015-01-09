@@ -15,7 +15,7 @@
       <tr class="{{ "success" if todo.done }}">
         <td><a href="/todos/{{ todo.id }}">{{ todo.id }}</a>
         <td style="{{ "text-decoration:line-through" if todo.done }}">{{ todo.title }}
-          <td>{{ todo.body }}</td>
+          <td>{{ todo.body|markdown }}</td>
         <td>{{ todo.publication_date.strftime('%Y-%m-%d %H:%M') }}
       {% endfor %}
     </table>
