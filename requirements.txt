@@ -7,3 +7,4 @@ Flask-Script==2.0.5
 Flask-WTF==0.8.4
 selenium==2.43.0
 Flask-Markdown==0.3
+Flask-PageDown==0.1

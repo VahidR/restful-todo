@@ -7,16 +7,19 @@
     <h2>Todos</h2>
     <table class="table table-hover">
       <tr>
-        <th>Item
-        <th>Title
-        <th>Body
-        <th>Date
+        <th>Item</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Date</th>
+      </tr>
       {% for todo in todos %}
       <tr class="{{ "success" if todo.done }}">
         <td><a href="/todos/{{ todo.id }}">{{ todo.id }}</a>
         <td style="{{ "text-decoration:line-through" if todo.done }}">{{ todo.title }}
+        <td style="{{ "text-decoration:line-through" if todo.done }}">{{ todo.title }}</td>
           <td>{{ todo.body|markdown }}</td>
-        <td>{{ todo.publication_date.strftime('%Y-%m-%d %H:%M') }}
+        <td>{{ todo.publication_date.strftime('%Y-%m-%d %H:%M') }}</td>
+      </tr>
       {% endfor %}
     </table>
     <p>

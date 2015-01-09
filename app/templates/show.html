@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block head %}
+  {{ super() }}
+  {{ pagedown.html_head() }}
+{% endblock %}
+
 {% block page_content %}
   <form action="" method="post" class="form-horizontal">
     <h3>Todo details</h3>
@@ -12,8 +17,9 @@
     </div>
 
     <div class="form-group">
-        <div class="">
-          <textarea name="body" rows=10 class="form-control input-xlarge" placeholder="describle the todo item" required>{{ todo.body }}</textarea>
+        <div class="flask-pagedown-preview">
+          {{ form.body(rows=6, class='form-control input-xlarge',
+            placeholder='Describle the todo item', required='required') }}
         </div>
     </div>
 
